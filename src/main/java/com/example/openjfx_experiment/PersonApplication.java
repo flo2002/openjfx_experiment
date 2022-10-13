@@ -19,7 +19,7 @@ public class PersonApplication extends Application {
         logger.info("HelloApplication started");
 
         FXMLLoader fxmlLoader = new FXMLLoader(PersonApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 500, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

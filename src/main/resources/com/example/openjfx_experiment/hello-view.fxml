@@ -3,14 +3,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.openjfx_experiment.PersonController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.openjfx_experiment.PersonController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Label fx:id="name" text="Name: " />
-            <TextField />
-         </children>
-      </HBox>
-      <Button fx:id="add" mnemonicParsing="false" text="add" onAction="#onAddButtonCLick" />
+      <Label text="Vorname: " GridPane.columnIndex="0" />
+      <Label fx:id="firstnameLabel" GridPane.columnIndex="1" />
+      <Label text="Nachname: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <Label fx:id="lastnameLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="addPersonBtn" mnemonicParsing="false" text="Person aktualisieren" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TextField fx:id="firstnameField" text="Flo" GridPane.rowIndex="2" />
+      <TextField fx:id="lastnameField" text="Schiemer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    </children>
-</VBox>
+</GridPane>

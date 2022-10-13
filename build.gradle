@@ -13,7 +13,7 @@ repositories {
 }
 
 ext {
-    junitVersion = '5.8.2'
+    junitVersion = '5.9.0'
 }
 
 sourceCompatibility = '11'
@@ -39,8 +39,9 @@ dependencies {
 
     implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
     implementation('org.hibernate:hibernate-core:6.1.4.Final')
-
     implementation('javax.persistence:javax.persistence-api:2.2')
+
+    implementation 'com.h2database:h2:2.1.214'
 }
 
 test {
