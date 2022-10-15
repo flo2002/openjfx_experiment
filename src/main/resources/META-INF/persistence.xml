@@ -10,9 +10,9 @@
             <property name="javax.persistence.jdbc.driver"
                       value="org.postgresql.Driver" />
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:postgresql://elmo.hostingcenter.uclv.net:5432/itb2021_fsc6890" />
-            <property name="javax.persistence.jdbc.user" value="itb2021_fsc6890" />
-            <property name="javax.persistence.jdbc.password" value="PW_SCFl" />
+                      value="jdbc:postgresql://asdf" />
+            <property name="javax.persistence.jdbc.user" value="asdf" />
+            <property name="javax.persistence.jdbc.password" value="asdf" />
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.H2Dialect"/>
             <property name="hibernate.hbm2ddl.auto" value="none"/>
