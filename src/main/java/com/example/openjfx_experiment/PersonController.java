@@ -1,11 +1,13 @@
 package com.example.openjfx_experiment;
 
+import com.example.openjfx_experiment.persistence.DatabaseFacade;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class PersonController {
+    //private DatabaseFacade dbf;
     @FXML
     private Label firstnameLabel;
     @FXML
@@ -19,13 +21,18 @@ public class PersonController {
 
     @FXML
     public void initialize() {
-        addPersonBtn.setOnAction( e -> {
+        //dbf = new DatabaseFacade();
+
+        /*firstnameLabel.setText(dbf.getAllPersons().get(0).getFirstName());
+        lastnameLabel.setText(dbf.getAllPersons().get(0).getLastName());*/
+
+        /*addPersonBtn.setOnAction( e -> {
             String firstname = firstnameField.getText();
             String lastname = lastnameField.getText();
             firstnameLabel.setText(firstname);
             lastnameLabel.setText(lastname);
         });
-        addPersonBtn.fire();
+        addPersonBtn.fire();*/
     }
 
     @FXML

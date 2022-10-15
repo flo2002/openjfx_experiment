@@ -1,5 +1,7 @@
 package com.example.openjfx_experiment;
 
+import com.example.openjfx_experiment.model.Person;
+import com.example.openjfx_experiment.persistence.DatabaseFacade;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,6 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.util.List;
 
 public class PersonApplication extends Application {
     final static Logger logger = null;
@@ -27,6 +30,19 @@ public class PersonApplication extends Application {
     }
 
     public static void main(String[] args) {
+        Person john = new Person();
+        john.setFirstName("John");
+        john.setLastName("Doe");
+
+        DatabaseFacade dbf = new DatabaseFacade();
+        //dbf.addPerson(john);
+
         launch();
+
+        /*List<Person> persons = dbf.getAllPersons();
+        logger.info("test");
+        for (Person pers : persons) {
+            System.out.println(pers.toString());
+        }*/
     }
 }
